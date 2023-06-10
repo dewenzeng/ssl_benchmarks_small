@@ -102,7 +102,7 @@ def train(modelConfig: Dict):
         model = nn.DataParallel(model)
     model.to(device)
 
-    optimizer = torch.optim.SGD(model.parameters(), lr=modelConfig["lr"], momentum=0.9, weight_decay=1e-4)
+    optimizer = torch.optim.SGD(model.parameters(), lr=modelConfig["lr"], momentum=modelConfig["momentum"], weight_decay=modelConfig["weight_decay"])
     cosineScheduler = optim.lr_scheduler.CosineAnnealingLR(
         optimizer=optimizer, T_max=modelConfig["epoch"], eta_min=0, last_epoch=-1)
     warmUpScheduler = GradualWarmupScheduler(
@@ -196,12 +196,14 @@ if __name__ == '__main__':
         "batch_size": 1024,
         "lr": 1e-2,
         "multiplier": 50,
+        "momentum": 0.9,
+        "weight_decay": 1e-4,
         "img_size": 32,
         "device": "cuda:0",
         "save_weight_dir": "checkpoints",
         "plot_dir": "tsne",
         "save_ckpt_interval": 200,
-        "dataset": "cifar10",
+        "dataset": "cifar100",
         "feat_dim": 256,
         "temperature": 0.5,
         "backbone": "resnet18",

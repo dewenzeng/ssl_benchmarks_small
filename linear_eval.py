@@ -36,7 +36,7 @@ def get_linear_eval_dataset(dataset='cifar10', batch_size=256):
                                     root='/home/ubuntu/data/cifar100/',
                                     train=True, download=True,
                                     transform=transforms.Compose([
-                                        transforms.RandomResizedCrop(size=32, scale=(0.08, 1.0)),
+                                        transforms.RandomResizedCrop(size=32, scale=(0.2, 1.0)),
                                         transforms.RandomHorizontalFlip(),
                                         transforms.ToTensor(),
                                         transforms.Normalize(mean=(0.5071, 0.4865, 0.4409), std=(0.2673, 0.2564, 0.2762)),
