@@ -15,7 +15,7 @@
 |        | Cifar10 | Cifar100 | STL10 |
 |--------|:---------:|:----------:|:----------:|
 | SimCLR | [91.76](https://tensorboard.dev/experiment/xX41MXS7QqWVB1E1mqUgGw/#scalars&_smoothingWeight=0) |   [65.86](https://tensorboard.dev/experiment/kND6mvhWSDKvgFeKEg5T3Q/#scalars&_smoothingWeight=0)       |       |
-| BYOL   |         |          |       |
+| BYOL   | [92.48](https://tensorboard.dev/experiment/1SAyBvoPQHWbOWxuP4zGPA/#scalars&_smoothingWeight=0) |   [68.53](https://tensorboard.dev/experiment/P9V2XSDTQyGuOyKdy7ksWA/#scalars&_smoothingWeight=0)      |       |
 | MoCo   |         |          |       |
 
 ### Resnet50 backbone (Top1 accuracy)
